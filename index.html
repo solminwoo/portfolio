@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Background / Hover nav</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script defer src="http://localhost:7000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh">
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.message')
+            $('.sidebarBtn').click(function () {
+                $('.sidebar').toggleClass('side_active')
+            })
+            $(".arrow").click(function () {
+                $(this).toggleClass("down");
+            })
+            
+            $(".pop").hide();
+            
+            $('.up').click(function () {
+                $('.pop').show('pop_active')
+                $('.message-bar').toggleClass('message-bar-border')
+            })
+            $('.down').click(function () {
+                $('.pop').hide('pop_active')
+                $('.message-bar').toggleClass('message-bar-border')
+            })
+            
+
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <ul class="box-area">
+        <li>Angular</li>
+        <li>HTML</li>
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>Django</li>
+        <li>.Net</li>
+        <li>C#</li>
+        <li>CSS</li>
+        <li>jquery</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>Socket.io</li>
+        <li>MongoDB</li>
+        <li>MySQL</li>
+    </ul>
+    <div class="banner-text">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Portfolio</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+        <h2>Welcome to Mike's Portfolio</h2>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Protfolio</a></li>
+        </ul>
+        <button class="sidebarBtn">
+            <span></span>
+            <img src="https://www.freepnglogos.com/uploads/play-button-png/index-media-cover-art-play-button-overlay-5.png"
+                class="arrow">
+        </button>
+    </div>
+
+    <div class="liveChat">
+        <div class="message-bar message-bar-border">
+            <h4>Live Chat</h4>
+            <img class="down" src="https://www.citybrewery.com/images/white-arrow.png">
+            <img class="up"
+                src="https://lh3.googleusercontent.com/proxy/ix3i2BXWSmmqEsiS-sKVKAT-P-m_kpNJ--7-LrmGwg_hscu8arKYrVEYQhogSNnyItQXfQl-9IJZDsK5f0TGRsTuphDHy7QSSouKAgJpa3zF8izM">
+        </div>
+        <div class="pop">
+            <div id="message-container"></div>
+            <div class="submit-container">
+                <form id="send-container" class="form-inline">
+                    <input type="text" class="form-control input_text" id="message-input">
+                    <button type="submit" id="send-button" class="btn btn-outline-info send mb-2">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="animation-area"> -->
+
+    <!-- </div> -->
+
+    <div class="container">
+        <h1></h1>
+    </div>
+
+</body>
+
+</html>
